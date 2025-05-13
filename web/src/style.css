@@ -1,0 +1,12 @@
+:root {
+  color-scheme: none !important;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.p-toast .p-toast-message {
+  backdrop-filter: none !important;
+}
