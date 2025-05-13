@@ -1,0 +1,21 @@
+{
+
+    "interact_with_job_npc": "Job center",
+    "incorrect_group_pass": "Incorrect group password",
+    "left_group_job": "You successfully left the group",
+    "entered_group_job": "You have successfully joined the group",
+
+    "you_have_job": "You can't join or start a new job, because you have already a given job",
+
+    "ui": {
+        "header": {
+            "job_tab_title": "Job center"
+        },
+        "jobs": {
+            "search_jobs": "Search jobs...",
+            "requirements": "Requirements",
+            "rank_tooltip": "Required rank to access this job",
+            "start_working": "Start Working"
+        }
+    }
+}
