@@ -18,10 +18,6 @@ const filteredJobs = computed(() => {
     );
 });
 
-const startJob = (jobId) => {
-    fetchNui('start-working', { job: jobId });
-};
-
 const getRequirementIcon = (type) => {
     const icons = {
         'license': 'pi pi-id-card',
@@ -31,6 +27,11 @@ const getRequirementIcon = (type) => {
     };
     return icons[type] || 'pi pi-check';
 };
+
+const getImageSource = (itemName) => {
+    return `nui://peuren_jobcenter/web/images/${itemName}`;
+};
+
 </script>
 
 <template>
@@ -53,7 +54,7 @@ const getRequirementIcon = (type) => {
                 :key="job.id" 
                 class="job-card">
                 <div class="job-header">
-                    <img :src="'/'+job.image" :alt="job.title">
+                    <img :src="getImageSource(job.image)" :alt="job.title">
                     <div class="job-title">
                         <div class="title-left">
                             <i :class="job.icon"></i>
@@ -90,7 +91,7 @@ const getRequirementIcon = (type) => {
 
                     <div class="button-group">
                         <Button class="start-button" 
-                               @click="startJob(job.id)">
+                               @click="fetchNui('start-working', job.id)">
                             <i class="pi pi-play"></i>
                             <span>{{ locale('jobs', 'start_working') }}</span>
                         </Button>

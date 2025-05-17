@@ -8,13 +8,6 @@
         {
             label: locale('header', 'job_tab_title'),
             icon: 'pi pi-briefcase',
-            command: () => {
-                if (!globalState.pageData.value.current) {
-                    globalState.changeCurrentTab("job");
-                } else  {
-                    globalState.changeCurrentTab("start-job");
-                }
-            }
         },
     ]);
 </script>

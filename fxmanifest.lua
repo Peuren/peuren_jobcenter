@@ -11,6 +11,7 @@ server_scripts { 'server/**/**' }
 
 files {
     'locales/*.json',
+    'web/images/**',
     'web/dist/**/**',
 }
 

@@ -6,6 +6,8 @@
     "entered_group_job": "You have successfully joined the group",
 
     "you_have_job": "You can't join or start a new job, because you have already a given job",
+    "job_requirements": "You don't meet the requirements to start this job",
+    "job_started": "You started a new job!",
 
     "ui": {
         "header": {

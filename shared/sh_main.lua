@@ -17,8 +17,8 @@ Config.JobCenter = {
     },
 
     Blip = {
-        sprite = 477,--Blip icon id
-        color = 5,--Blip color id
+        sprite = 351,--Blip icon id
+        color = 3,--Blip color id
         scale = 1.0,--Blip scale
         label = "Job Center",--Blip label
     },
@@ -26,74 +26,94 @@ Config.JobCenter = {
 
 Config.Jobs = {
     {
-        id = 'towing',
-        title = 'Towing Service',
+        id = 'towing',--job id
+        title = 'Towing Service',--job title
         description = 'Help stranded motorists by providing professional towing services.',
         image = 'tow.png',
-        icon = 'pi pi-truck',
-        rank = 2,
+        icon = 'pi pi-truck',--https://primevue.org/icons/
         requirements = {
-            { type = 'license', label = 'Drivers License', severity = 'info' },
-            { type = 'money', label = '$500', severity = 'danger' }
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'phone', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 500 }
         }
     },
     {
-        id = 'garbage',
-        title = 'Garbage Collection',
+        id = 'garbage',--job id
+        title = 'Garbage Collection',--job title
         description = 'Keep the city clean by collecting and disposing of waste.',
         image = 'garbage.png',
-        icon = 'pi pi-inbox',
-        rank = 1,
+        icon = 'pi pi-inbox',--https://primevue.org/icons/
         requirements = {
-            { type = 'license', label = 'Drivers License', severity = 'info' }
+            -- types: item or money
+            -- label: label of the item or money amount
+            -- severity: severity of the item or money (info, danger, success)
+            -- value: item name or account type
+            -- args: amount of item or money
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'drivers_license', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 100 },
         }
     },
     {
-        id = 'delivery',
-        title = 'Package Delivery',
+        id = 'delivery',--job id
+        title = 'Package Delivery',--job title
         description = 'Deliver packages and parcels throughout the city.',
         image = 'delivery.png',
-        icon = 'pi pi-box',
-        rank = 1,
-        requirements = {
-            { type = 'license', label = 'Drivers License', severity = 'info' },
-            { type = 'item', label = 'Phone', severity = 'warning' }
+        icon = 'pi pi-box',--https://primevue.org/icons/
+        requirements = {            
+            -- types: item or money
+            -- label: label of the item or money amount
+            -- severity: severity of the item or money (info, danger, success)
+            -- value: item name or account type
+            -- args: amount of item or money
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'drivers_license', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 100 }
         }
     },
     {
-        id = 'mining',
-        title = 'Mining',
+        id = 'mining',--job id
+        title = 'Mining',--job title
         description = 'Extract valuable resources from the mines.',
         image = 'miner.png',
-        icon = 'pi pi-compass',
-        rank = 5,
+        icon = 'pi pi-compass',--https://primevue.org/icons/
         requirements = {
-            { type = 'item', label = 'Mining Tools', severity = 'warning' },
-            { type = 'money', label = '$1000 Deposit', severity = 'danger' }
+            -- types: item or money
+            -- label: label of the item or money amount
+            -- severity: severity of the item or money (info, danger, success)
+            -- value: item name or account type
+            -- args: amount of item or money
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'drivers_license', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 100 }
         }
     },
     {
-        id = 'farmer',
-        title = 'Farming',
+        id = 'farmer',--job id
+        title = 'Farming',--job title
         description = 'Farm plants and make money.',
         image = 'farmer.png',
-        icon = 'fas fa-tractor',
-        rank = 1,
+        icon = 'pi pi-home',--https://primevue.org/icons/
         requirements = {
-            { type = 'item', label = 'Mining Tools', severity = 'warning' },
-            { type = 'money', label = '$1000 Deposit', severity = 'danger' }
+            -- types: item or money
+            -- label: label of the item or money amount
+            -- severity: severity of the item or money (info, danger, success)
+            -- value: item name or account type
+            -- args: amount of item or money
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'drivers_license', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 100 }
         }
     },
     {
-        id = 'gruppe6',
-        title = 'Gruppe sechs',
+        id = 'gruppe6',--job id
+        title = 'Gruppe sechs',--job title
         description = 'Transport money accross bank locations.',
         image = 'gruppe6.png',
-        icon = 'fas fa-gun',
-        rank = 1,
+        icon = 'pi pi-dollar',--https://primevue.org/icons/
         requirements = {
-            { type = 'item', label = 'Mining Tools', severity = 'warning' },
-            { type = 'money', label = '$1000 Deposit', severity = 'danger' }
+            -- types: item or money
+            -- label: label of the item or money amount
+            -- severity: severity of the item or money (info, danger, success)
+            -- value: item name or account type
+            -- args: amount of item or money
+            { type = 'item', label = 'Drivers License', severity = 'info', value = 'drivers_license', args = 1 },
+            { type = 'money', label = '$500', severity = 'danger', value = 'bank', args = 100 }
         }
     }
 }
