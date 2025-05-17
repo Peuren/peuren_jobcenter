@@ -1,5 +1,4 @@
 # peuren_jobcenter
-WORK IN PROGRESS
-Job center | WIP
+Job center
 
 ![alt text](image.png)
